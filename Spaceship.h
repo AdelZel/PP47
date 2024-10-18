@@ -21,10 +21,10 @@ private:
     int hp; // 1 if alive, 0 - death
 
 public:
-    int spot;
+    int spot; // spot at which the spaceship is when destroyed
     // types: 0 - player, 1 - enemy
-    Spaceship();
-    Spaceship(Vector2f location, Vector2f size, Sprite*sprite, int type, float speed);
+    Spaceship(); // zero constructor - placeholder for list creation.
+    Spaceship(Vector2f location, Vector2f size, Sprite*sprite, int type, float speed); // default constructor
     // creates an instance of laser class and gives it speed and direction
     virtual void shoot();
     // returns the type of an instance (to check if laser hits a player or an enemy)

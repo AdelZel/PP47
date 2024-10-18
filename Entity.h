@@ -13,15 +13,15 @@
 
 class Entity {
 private:
-    sf::Vector2f location;
-    sf::Vector2f size;
-    sf::Sprite* sprite;
+    sf::Vector2f location; // location of an entity - 2d coordinate of the top left corner of an Entity hitbox
+    sf::Vector2f size; // size of the entity. based of the size of the sprite assigned
+    sf::Sprite* sprite; // sprite that is assigned to the entity
 
 
 public:
-    Entity(sf::Vector2f location, sf::Vector2f size, sf::Sprite* sprite);
-    Entity();
-    ~Entity();
+    Entity(sf::Vector2f location, sf::Vector2f size, sf::Sprite* sprite); // default constructor
+    Entity(); // zero constructor for creation of empty list placeholders
+    ~Entity(); // class object destructor
     //checks if the entity is colliding with a given entity passed to the function and returns true if it is and false if not
     bool checkCollision(Entity Collider);
     //checks if the entity is colliding with any entity within the vector passed to the function and if it is, adds it to an output vector

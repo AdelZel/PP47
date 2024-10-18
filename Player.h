@@ -16,14 +16,14 @@ using namespace sf;
 
 class Player: public Spaceship {
 private:
-Vector2f location;
-Vector2f size;
-Sprite* sprite;
-float speed;
+Vector2f location; // location of the player's spaceship - top left corner 
+Vector2f size; // size. based on the size of the sprite
+Sprite* sprite; // player's sprite
+float speed; // speed - aka multiplier of the number of pixels that a player passes in one delta time
 
 public:
-    Player(Vector2f location, Vector2f size, Sprite*sprite, float speed);
-    void shoot();
+    Player(Vector2f location, Vector2f size, Sprite*sprite, float speed); // default constructor
+    void shoot(); // creates a laser owned by the player
 };
 
 #endif

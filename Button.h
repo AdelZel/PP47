@@ -20,13 +20,13 @@ public:
     
     // method that checks where a mouse button has been clicked and returns true if it was clicked inside the button region
     // returns false if it was clicked outside of the button region.
-    // takes in 
+    // takes in vector2i that describes mouse position at the moment of th click
     bool checkClick (sf::Vector2i);
 
 
 private:
-    sf::Vector2i location;
-    sf::Vector2i size;
+    sf::Vector2i location; // top left corner 
+    sf::Vector2i size; // size of the button as a vector
 };
 
 #endif

@@ -8,11 +8,11 @@
 
 class Projectile: public Entity{
     private:
-        sf::Vector2f location;
-        sf::Vector2f size;
-        sf::Sprite* sprite;
-        int ownerType;
-        int speed;
+        sf::Vector2f location; // location of the projectile. vector, having x - horizontal coordinate and y - vertical coordinate
+        sf::Vector2f size; // size. based on the sprite
+        sf::Sprite* sprite; // sprite of the projectile. moves as the object moves.
+        int ownerType; // 0 - player; 1 - enemy
+        int speed; // speed at which the projectile moves
         
     public:
         //constructor for Projectile class, it takes a location, a size, a sprite, an ownerType, and speed, 

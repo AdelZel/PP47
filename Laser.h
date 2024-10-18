@@ -6,12 +6,12 @@
 
 class Laser: public Projectile{
 private:
-    sf::Vector2f location;
-    sf::Vector2f size;
-    sf::Sprite* sprite;
-    int ownerType;
-    int spot;
-    int speed;
+    sf::Vector2f location; // spawn location of the laser
+    sf::Vector2f size; // size of the hitbox of the laser basesd on the size of the sprite
+    sf::Sprite* sprite; // laser sprite
+    int ownerType; // 0 - player; 1 - enemy
+    int spot; // spot at which the laser is destructed
+    int speed; // speed at which the laser moves
 
 public:
     //constructor for Laser class, it takes a location,  an ownerType, 
